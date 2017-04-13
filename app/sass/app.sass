@@ -1,0 +1,167 @@
+$NAV_BGCOR: #393D49
+// reset layui css
+.layui-form-label
+  width: 8em
+  &.width-3
+    width: 3em
+  &.width-4
+    width: 4em
+  &.width-5
+    width: 5em
+.layui-input-block
+  margin-left: 10.2em
+.layui-input-inline
+  &.small
+    width: 120px
+  &.smaller
+    width: 80px
+  &.smallest
+    width: 60px
+// base style
+.bg-gray
+  background: #f0f0f0
+.bg-white
+  background: #FFF
+.color-gray
+  color: #999
+
+// app style
+.header
+  height: 59px
+  border-bottom: 1px solid #404553
+  background-color: $NAV_BGCOR
+  .logo
+    color: #FFF
+    font-size: 20px
+    line-height: 60px
+  .user-w
+    position: absolute
+    right: 0
+    top: 0
+    padding: 0
+    background: none
+
+  .user-avatar
+    margin-top: 15px
+    float: left
+    width: 30px
+    height: 30px
+    background: #ddd
+    border-radius: 50%
+  .user-name
+    color: #fff
+    line-height: 60px
+  .user-action
+    margin-left: 10px
+    color: #fff
+    line-height: 60px
+    cursor: pointer
+
+.form-header
+  .form-text
+    margin-top: 20px
+  .form-steps-w
+    margin: 50px auto
+    .form-steps
+      display: flex
+      justify-content: center
+    .step-w
+      position: relative
+      display: block
+      width: 5em
+      max-width: 200px
+      margin-right: 80px
+      &:after
+        position: absolute
+        top: 24px
+        left: 5em
+        width: 80px
+        height: 1px
+        display: block
+        content: ''
+        border-top: 1px dashed #888
+      &:last-child:after
+        display: none
+      &.active
+        .step-num
+          color: #FFF
+          background: #CCC
+    .step-num
+      margin: 0px auto 10px
+      width: 48px
+      height: 48px
+      font-size: 18px
+      text-align: center
+      line-height: 48px
+      background: #FFF
+      border-radius: 50%
+    .step-text
+      text-align: center
+
+.form-body
+  padding: 0px 30px
+  .subform-w
+    padding: 0
+  .subform-head
+    position: relative
+    &:after
+      position: absolute
+      top: 15px
+      left: 120px
+      width: 960px
+      height: 1px
+      border-top: 1px dashed #888
+      display: block
+      content: ''
+  .subform-num
+    float: left
+    margin-right: 10px
+    width: 30px
+    height: 30px
+    background: #CCC
+    color: #FFF
+    font-size: 16px
+    text-align: center
+    line-height: 30px
+    border-radius: 50%
+  .subform-title
+    line-height: 34px
+    font-size: 18px
+  .subform-body
+    position: relative
+    padding-left: 50px
+    width: 80%
+    &:before
+      position: absolute
+      top: 5px
+      left: 15px
+      padding-bottom: 3px
+      width: 1px
+      height: 100%
+      border-left: 1px dashed #888
+      display: block
+      content: ''
+
+  .pic-full-w
+    margin-top: 10px
+    width: 100%
+    height: 200px
+    background: #DDD
+    text-align: center
+    line-height: 200px
+
+
+.form-panel
+  position: relative
+  // padding-right: 40px
+  .form-panel-clostbtn
+    position: absolute
+    right: -30px
+    top: 0px
+    width: 30px
+    height: 30px
+    background: #FFF
+    cursor: pointer
+  .form-panel-body
+    padding: 20px 20px 20px 0px
+    background-color: #FFF

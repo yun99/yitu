@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>layui在线调试</title>
+	<link rel="stylesheet" href="/lib/layui/css/layui.css" media="all">
+	<link rel="stylesheet" href="/css/app.css" media="all">
+</head>
+<body>
+	<div class="layui-header header">
+		<div class="layui-main">
+			<h1>目录</h1>
+		</div>
+	</div>
+	<div class="layui-main">
+		<table class="layui-table">
+			<colgroup>
+				<col width="100">
+				<col width="150">
+				<col>
+			</colgroup>
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>名称</th>
+					<th>地址</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>路线录入</td>
+					<td><a href="./routeAdd.html">./routeAdd.html</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+
+
+	<script src="/lib/layui/layui.js"></script>
+	<script>
+		layui.use(['jquery', 'form', 'layer', 'laypage', 'element'], function() {
+			var layer = layui.layer,
+				laypage = layui.laypage,
+				$ = layui.jquery,
+				element = layui.element();
+			//向世界问个好
+			// layer.msg('Hello World');
+			//监听Tab切换
+			element.on('tab(demo)', function(data) {
+				layer.msg('切换了：' + this.innerHTML);
+				console.log(data);
+			});
+			//分页
+			laypage({
+				cont: 'pageDemo' //分页容器的id
+					,
+				pages: 100 //总页数
+					,
+				skin: '#5FB878' //自定义选中色值
+					//,skip: true //开启跳页
+					,
+				jump: function(obj, first) {
+					if (!first) {
+						layer.msg('第' + obj.curr + '页');
+					}
+				}
+			});
+			// var form = layui.form();
+			//监听提交
+			// form.on('submit(formDemo)', function(data){
+			//   console.log(data)
+			//   // layer.msg(JSON.stringify(data.field));
+			//   // return false;
+			// });
+			$(document).ready(function() {
+				$("#submit0").on("click", function() {
+					alert();
+				})
+			})
+		});
+	</script>
+</body>
+</html>

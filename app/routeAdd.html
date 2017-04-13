@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>路线录入</title>
+	<link rel="stylesheet" href="/lib/layui/css/layui.css" media="all">
+	<link rel="stylesheet" href="/css/app.css" media="all">
+</head>
+<body class="bg-gray">
+	<div class="layui-header header">
+		<div class="layui-main">
+			<a class="logo" href="">逸途产品录入平台</a>
+			<div class="user-w">
+				<div class="user-avatar"></div>
+				<a class="user-action" href="javascript:;">个人中心</a>
+				<a class="user-action" href="javascript:;">退出</a>
+			</div>
+		</div>
+	</div>
+	<div class="layui-main">
+		<div class="form-header">
+			<div class="form-text">hi~王小二，欢迎录入线路信息！</div>
+			<div class="form-steps-w">
+				<ul class="form-steps">
+					<li class="step-w active">
+						<div class="step-num">1</div>
+						<p class="step-text">基本信息</p>
+					</li>
+					<li class="step-w">
+						<div class="step-num">2</div>
+						<p class="step-text">行程信息</p>
+					</li>
+					<li class="step-w">
+						<div class="step-num">3</div>
+						<p class="step-text">费用说明</p>
+					</li>
+					<li class="step-w">
+						<div class="step-num">4</div>
+						<p class="step-text">预定须知</p>
+					</li>
+					<li class="step-w">
+						<div class="step-num">5</div>
+						<p class="step-text">价格设定</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<form class="layui-form form-body" action="">
+			<div class="subform-w">
+				<div class="subform-head">
+					<div class="subform-num">1</div>
+					<h3 class="subform-title">基本信息</h3>
+				</div>
+				<div class="subform-body">
+					<div class="layui-form-item">
+						<label class="layui-form-label">产品类型：</label>
+						<div class="layui-input-block">
+							<input type="radio" name="product_type" value="自由行" title="自由行" checked>
+							<input type="radio" name="product_type" value="跟团游" title="跟团游">
+							<input type="radio" name="product_type" value="跟团游" title="跟团游">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">目的地：</label>
+						<div class="layui-input-inline">
+							<select name="destination">
+								<option value="">请选择省</option>
+								<option value="浙江">浙江省</option>
+								<option value="江西">江西省</option>
+								<option value="福建">福建省</option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select name="quiz2">
+								<option value="">请选择市</option>
+								<option value="杭州">杭州</option>
+								<option value="温州">温州</option>
+								<option value="温州">台州</option>
+								<option value="温州">绍兴</option>
+							</select>
+						</div>
+						<div class="layui-input-inline">
+							<select name="quiz3">
+								<option value="">请选择县/区</option>
+								<option value="西湖区">西湖区</option>
+								<option value="余杭区">余杭区</option>
+								<option value="拱墅区">临安市</option>
+							</select>
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">产品标题：</label>
+						<div class="layui-input-block">
+							<input type="text" name="product_title" placeholder="请输入线路标题" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">产品副标题：</label>
+						<div class="layui-input-block">
+							<input type="text" name="product_subtitle" placeholder="请输入线路副标题" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">产品关键字：</label>
+						<div class="layui-input-block">
+							<input type="text" name="product_keywords" placeholder="请输入产品关键字" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">产品亮点：</label>
+						<div class="layui-input-block">
+							<input type="text" name="product_selling" placeholder="请输入产品亮点" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">逸途独家：</label>
+						<div class="layui-input-block">
+							<input type="text" name="yitu_owned" placeholder="请输入逸途独家" class="layui-input">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">上传封面：</label>
+						<div class="layui-input-block">
+							<input type="file" name="poster_pic" class="layui-upload-file">
+							<span class="color-gray">建议图片尺寸 0000X99999</span>
+							<div class="pic-full-w">pic</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="subform-w">
+				<div class="subform-head">
+					<div class="subform-num">2</div>
+					<h3 class="subform-title">行程信息</h3>
+				</div>
+				<div class="subform-body">
+					<div class="layui-form-item">
+						<label class="layui-form-label">行程天数：</label>
+						<div class="layui-input-inline">
+							<select name="days">
+								<option value="1" selected="">1天</option>
+								<option value="2" selected="">2天</option>
+								<option value="3" selected="">3天</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="subform-w">
+				<div class="subform-head">
+					<div class="subform-num">3</div>
+					<h3 class="subform-title">费用说明</h3>
+				</div>
+				<div class="subform-body">
+					<div class="layui-form-item">
+						<label class="layui-form-label">费用包含：</label>
+						<div class="layui-input-block bg-white">
+							<textarea id="cost_include" style="display: none;"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="subform-body">
+					<div class="layui-form-item">
+						<label class="layui-form-label">费用不包含：</label>
+						<div class="layui-input-block bg-white">
+							<textarea id="cost_without" style="display: none;"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="subform-w">
+				<div class="subform-head">
+					<div class="subform-num">4</div>
+					<h3 class="subform-title">预定须知</h3>
+				</div>
+				<div class="subform-body">
+					<div class="layui-form-item">
+						<div class="layui-input-block bg-white">
+							<textarea id="notice" style="display: none;"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="subform-w">
+				<div class="subform-head">
+					<div class="subform-num">5</div>
+					<h3 class="subform-title">价格设定</h3>
+				</div>
+				<div class="subform-body">
+					<blockquote class="layui-elem-quote">
+						<button class="layui-box layui-upload-button" type="button">
+							<span class="layui-upload-icon">
+							<i class="layui-icon">
+							</i>添加产品种类
+							</span>
+						</button>
+					</blockquote>
+
+					<script type="text/template">
+
+					</script>
+					<div class="form-panel">
+						<div class="form-panel-clostbtn"></div>
+						<div class="form-panel-body">
+							<div class="layui-form-item">
+								<label class="layui-form-label">种类名称：</label>
+								<div class="layui-input-block">
+									<input type="text" name="yitu_owned" placeholder="请输入票种名称" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">类型：</label>
+								<div class="layui-input-inline small">
+									<select name="">
+										<option value="1" selected="">成人</option>
+									</select>
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<div class="layui-inline">
+									<label class="layui-form-label">结算价：</label>
+									<div class="layui-input-inline small">
+										<input type="text" name="" placeholder="请输入结算价" class="layui-input">
+									</div>
+								</div>
+								<div class="layui-inline">
+									<label class="layui-form-label width-4">售卖价：</label>
+									<div class="layui-input-inline small">
+										<input type="text" name="" placeholder="请输入售卖价" class="layui-input">
+									</div>
+									<div class="layui-input-inline smaller">
+										<select name="">
+											<option value="1" selected="">JPN</option>
+										</select>
+									</div>
+								</div>
+								<div class="layui-inline">
+									<label class="layui-form-label width-3">库存：</label>
+									<div class="layui-input-inline small">
+										<input type="text" name="" placeholder="请输入结算价" class="layui-input">
+									</div>
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<div class="layui-inline">
+									<label class="layui-form-label">有效期：</label>
+									<div class="layui-input-inline small">
+										<input id="start_date" class="layui-input" placeholder="---请选择---">
+									</div>
+									<div class="layui-form-mid">至</div>
+									<div class="layui-input-inline small">
+										<input id="end_date" class="layui-input" placeholder="---请选择---" >
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<!-- <div class="layui-footer"></div> -->
+	<script type="text/javascript"  src="/lib/layui/layui.js"></script>
+	<script type="text/javascript">
+		layui.use(['jquery', 'form', 'upload', 'layedit', 'laydate', 'layer', 'laypage', 'element'], function() {
+			var layer = layui.layer,
+				upload = layui.upload,
+				layedit = layui.layedit,
+				laydate = layui.laydate,
+				laypage = layui.laypage,
+				$ = layui.jquery,
+				element = layui.element();
+
+				layui.upload();
+				layedit.build("cost_include", {height: 150});
+				layedit.build("cost_without", {height: 150});
+				layedit.build("notice", {height: 150});
+
+				// 日期
+				var start = {
+				    min: laydate.now(),
+				    max: '2099-06-16 23:59:59',
+				    istoday: false,
+				    choose: function(datas){
+				      end.min = datas; //开始日选好后，重置结束日的最小日期
+				      end.start = datas //将结束日的初始值设定为开始日
+				    }
+				  };
+
+				  var end = {
+				    min: laydate.now(),
+				    max: '2099-06-16 23:59:59',
+				    istoday: false,
+				    choose: function(datas){
+				      start.max = datas; //结束日选好后，重置开始日的最大日期
+				    }
+				  };
+				document.getElementById('start_date').onclick = function() {
+					start.elem = this;
+					laydate(start);
+				}
+				document.getElementById('end_date').onclick = function() {
+					end.elem = this;
+					laydate(end);
+				}
+		});
+	</script>
+</body>
+</html>
